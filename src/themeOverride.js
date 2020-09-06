@@ -8,8 +8,8 @@ module.exports = {
   '@error-color': '#f5222d', // error state color
   '@font-size - base': '14px', // major text font size
   '@heading-color': 'rgba(0, 150, 0, 0.85)', // heading text color
-  '@text-color': 'rgba(100, 100, 0, 0.65)', // major text color
-  '@text-color - secondary': 'rgba(0, 200, 0, 0.45)', // secondary text color
+  '@text-color': 'rgba(200, 200, 200, 0.65)', // major text color
+  '@text-color - secondary': 'rgba(0200, 200, 0, 0.45)', // secondary text color
   '@disabled-color': 'rgba(0, 0, 0, 0.25)', // disable state color
   '@border-radius - base': '2px', // major border radius
   '@border-color - base': '#d9d9d9', // major border color
