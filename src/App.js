@@ -1,26 +1,34 @@
 import React from 'react';
 import './App.less';
-import {Button, Layout} from 'antd';
-const {Content, Header, Sider, Footer}= Layout;
+import {Breadcrumb, Layout, Menu} from 'antd';
+const {Content, Header, Footer}= Layout;
 
 function App() {
   return (
-    <Layout className= 'mainCont' hasSider= 'true'>
-      <Header>
-        Ant Header
+    <Layout style= {{height: '100vh'}} className= 'layout'>
+      <Header style= {{
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'center'
+      }}>
+        <div className= 'logo'>Antd</div>
+        <Menu theme= 'dark' mode= 'horizontal' defaultSelectedKeys= {['1']}>
+          <Menu.Item key= '1'>Nav 1</Menu.Item>
+          <Menu.Item key= '2'>Nav 2</Menu.Item>
+          <Menu.Item key= '3'>Nav 3</Menu.Item>
+        </Menu>
       </Header>
-      <Layout>
-        <Sider>
-          <Content>
-            <Button>Ant Button</Button>
-            Main Content
-          </Content>
-          <Sider>
-            SideBar
-          </Sider>
-        </Sider>
-      </Layout>
-      <Footer>Footer</Footer>
+
+      <Content style= {{padding: '0 50px'}}>
+        <Breadcrumb style= {{margin: '16px 0'}}>
+          <Breadcrumb.Item>Home</Breadcrumb.Item>
+          <Breadcrumb.Item>List</Breadcrumb.Item>
+          <Breadcrumb.Item>App</Breadcrumb.Item>
+        </Breadcrumb>
+        <div className= 'site-layout-content'>Content</div>
+      </Content>
+
+      <Footer style= {{textAlign: 'center'}}>Footer</Footer>
     </Layout>
   );
 }
